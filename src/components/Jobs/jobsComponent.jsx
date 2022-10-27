@@ -16,23 +16,23 @@ export default function Jobs() {
     const state = useSelector(state => state);
     console.log(state);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(() => {
-        (async function () {
-            try {
-                dispatch(apiActions.fetch(JOBS));
+    // useEffect(() => {
+    //     (async function () {
+    //         try {
+    //             dispatch(apiActions.fetch(JOBS));
 
-                const data = await api.fetch(JOBS);
+    //             const data = await api.fetch(JOBS);
 
-                dispatch(apiActions.fetchSuccess(JOBS, data));
-            } catch (error) {
-                dispatch(apiActions.fetchSuccess(JOBS, error));
-            }
-        })();
-    }, []);
+    //             dispatch(apiActions.fetchSuccess(JOBS, data));
+    //         } catch (error) {
+    //             dispatch(apiActions.fetchSuccess(JOBS, error));
+    //         }
+    //     })();
+    // }, []);
 
-    console.log(state);
+    // console.log(state);
 
     return (
         <div>
